@@ -92,3 +92,16 @@ Hello Diallo, votre adresse email est le: diallo@gmail.com.
 Voilà.
 
 ### Nomination des variables
+
+Maintenant que nous avons vu comment définir une variable, il faut savoir qu'il y a quelques règles à suivre pour donner à vos variables. La première et celle qu'il ne faut jamais négliger, c'est qu'il faut que le nom de votre variable reflète son contenu. Qu'est ce que ça veut dire? Si vous voulez d'une variable pour enregistrer le nom de votre utilisateur par exemple, la variable va s'appeler name ou nom (utilisez plutôt la version anglaise) et nom n ou quelque chose qui n'a rien à voir avec le nom. Le nom de la variable doit toujours nous indiquer ce que la variable contient. Pourquoi? Imaginez, vous développez votre application de jeu vidéo et vous donnez des noms à vos variables comme p, n et a. Alors vous vous dites peut être que p vaut prénom, n vaut nom et a vaut age. Mais non, pour moi p vaut power, n vaut name et a vaut alive. Vous voyez deja le premier problème? On n'a pas la meme signification du contenu des variables. Mais ça c'est dans le cas ou vous partagez votre code, et c'est ce qui arrive souvent, vous serez emmener à travailler en entreprise, avec d'autres personnes. Maintenant l'autre cas, si vous laissez ce code ne serait-ce que pour pour un mois sans y toucher, le jour vous allez le reprendre je peux vous assurer que vous allez vous detester, pour de vrai. Il ne faut jamais manquer cette première règle.
+
+En plus de cela, il y a d'autres règles à respecter:
+
+- Le Python est sensible à la casse. name est différent de Name qui est aussi différent de NAME
+- Le nom d'une variable commence toujours par une lettre ou underscore \_ (tiret du 8)
+- Le nom d'une variable n'est composer que de lettres, underscore et chiffres et pas de caractères accentués pas de prénom par exemple, mais plutôt prénom. C'est l'une des raisons d'utiliser l'anglais qui n'a pratiquement de caractères accentués
+- Si le nom de votre variable contient des espaces, remplacer les espaces par des underscores (prenom et nom -> prenom_et_nom)
+- Le nom de votre variable ne doit pas être un [mot clé](https://www.programiz.com/python-programming/keyword-list) de Python
+- Encore une fois utiliser des noms de variables clairs, qui définissent le contenu de la variable
+
+Alors plus haut, je préconise l'utilisation de l'anglais donner des noms à vos variables, name au lieu de nom, first_name au lieu de prénom et ainsi de suite, d'abord pour éviter les caractères accentués, mais aussi parce que quand vous travaillez avec d'autres personnes qui ne sont pas français, ou que vous votre projet est open source, les personnes qui liront votre code votre code doivent tout de suite se retrouver, I mean l'anglais c'est la langue du business mondial. Et puis c'es franchement joli d'avoir des noms de variables en Anglais. Toutes les variables dans ce livre seront donc en Anglais.
