@@ -105,3 +105,80 @@ En plus de cela, il y a d'autres règles à respecter:
 - Encore une fois utiliser des noms de variables clairs, qui définissent le contenu de la variable
 
 Alors plus haut, je préconise l'utilisation de l'anglais donner des noms à vos variables, name au lieu de nom, first_name au lieu de prénom et ainsi de suite, d'abord pour éviter les caractères accentués, mais aussi parce que quand vous travaillez avec d'autres personnes qui ne sont pas français, ou que vous votre projet est open source, les personnes qui liront votre code votre code doivent tout de suite se retrouver, I mean l'anglais c'est la langue du business mondial. Et puis c'es franchement joli d'avoir des noms de variables en Anglais. Toutes les variables dans ce livre seront donc en Anglais.
+
+## Types de données
+
+Le Python est un langage dynamiquement typé. Ce qui veut dire que vous n'avez pas besoin de renseigner le type d'une variable à sa declaration, Python déduit automatiquement le type de la variable en fonction de son contenu. Contrairement à des langages comme le C ou Java, ou il faut explicitement spécifier le type de la variable, et le type de la variable reste le meme durant l'execution du programme, en Python, une variable peut changer de type pendant l'execution du programme sans problème.
+
+Les types de donnees en Python sont nombreux. Nous avons:
+
+- Les booléens (Boolean) qui sont soit vrai (True) soit faux (False). Un utilisateur est actif (True) ou pas (False).
+- Les nombres qui peuvent êtres des entiers (Integer) comme l'age d'un utilisateur (25) ou des nombres décimaux (Float) comme la taille d'un utilisateur en mètres (1.80)
+- Les chaines de caractères (String) qui sont une sequences de caractères alpha numériques. Le nom de l'utilisateur (Diallo) ou son téléphone (+221 33 000 00 00)
+- Les listes (List) qui sont des suites de valeur ordonnées. Les notes de l'utilisateur [10, 14, 10.5, 14]
+- Les tuples (Tuple) qui sont des suites de valeur ordonnées non modifiables. Les cordonnées longitude et latitude de l'adresse de l'utilisateur (-12.0000, 45.000)
+- Les sets (Set) qui sont une suite de valeur unique (pas de repetition)
+- Les dictionnaires (Dictionary) qui sont une suite de pair clé-valeur, chaque clé à une valeur
+
+Nous allons d'abord des 3 premiers, booléens, nombres et chaines de caractères. Nous verrons les autres plus tard.
+
+### Les nombres (Number)
+
+Python supporte deux types de nombres, les entiers et les décimaux. Les nombres sont pratiquement utilisés dans tout les programmes: enregistrer les scores dans un jeu, les notes d'un élève dans une application web, ...
+
+```python
+>>> age = 25
+>>> height = 1.92
+>>>
+```
+
+La variables age est ici de type entier alors que la variable height est de type decimal. On utilise le point pour les valeurs décimales.
+
+Nous pouvons effectuer toutes les opérations mathématiques que nous connaissons déjà.
+
+```python
+>>> 4 + 7
+11
+>>> 4.0 + 7
+11.0
+>>> age = 25
+>>> pi = 3.14
+>>> age + pi
+29.14
+>>> 5 / 2
+2.5
+>>> 5 // 2
+2
+>>>
+```
+
+L'interpréteur nous affiche le résultat de chaque opération. Sur la dernière opération (5 // 2) le double slash (//) retourne la partie entière de la division. Et quand nous faisons une operation entre un entier et décimal, la réponse est un décimal.
+
+Nous pouvons aussi calculer le carré:
+
+```python
+>>> 2 ** 2
+4
+>>> 4 ** 4
+256
+>>>
+```
+
+Python supporte aussi la priorité dans les opérations:
+
+```python
+>>> 4 + 4 * 4
+20
+>>> (4 + 4) * 4
+32
+>>>
+```
+
+Et pour afficher un nombre, on utilise toujours print()
+
+```python
+>>> age = 25
+>>> print(age)
+25
+>>>
+```
