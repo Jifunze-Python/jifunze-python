@@ -194,3 +194,87 @@ Et pour afficher un nombre, on utilise toujours print()
 25
 >>>
 ```
+
+### Les chaines de caractères (String)
+
+Une chaîne de caractères est simplement un ensemble de caractères alphanumériques, les uns à la suite des autres. En Python, les chaines de caractères sont délimitées par des apostrophes, simples ou double.
+
+```python
+>>> 'Ceci est une chaîne de caractères'
+>>> "Ceci est une chaîne de caractères"
+```
+
+Si vous ouvrez une chaîne de caractères avec une apostrophe simple, vous la fermer avec une apostrophe simple, c'est aussi valable pour les apostrophes doubles.
+
+Les chaines de caractères vont par exemple nous permettre d'enregistrer le nom d'un utilisateur, son telephone, ...
+
+```python
+>>> name = 'Diallo'
+>>> phone = '+221 33 000 00 00'
+>>> email = "user@gmail.com'
+```
+
+Nous pouvons additionner deux chaines, c'est ce qu'on appelle la concaténation, rappelez-vous en:
+
+```python
+>>> bonjour = 'Bonjour'
+>>> name = 'Diallo'
+>>> message = bonjour + name
+>>> print(message)
+BonjourDiallo
+>>>
+```
+
+Oups, Houston, we got a problem. Il n'y a pas d'espaces. Eh ben il faut le rajouter:
+
+```python
+>>> bonjour = 'Bonjour'
+>>> name = 'Diallo'
+>>> message = bonjour + ' ' + name
+>>> print(message)
+Bonjour Diallo
+>>>
+```
+
+Et voilà!
+
+Mais quand utiliser une apostrophe simple ou double?
+
+> Utiliser des apostrophes simples si votre chaîne contient des apostrophes doubles et utilisez des apostrophes doubles si votre chaîne contient des apostrophes simples.
+
+C'est aussi simple que cela:
+
+```python
+>>> sentence1 = "Je vais à l'école"
+>>> print(sentence1)
+Je vais à l'école
+>>> sentence2 = 'Je suis "COOL"'
+>>> print(sentence2)
+Je suis "COOL"
+```
+
+Et si votre chaîne contient les deux? Utiliser soit une apostrophe simple et précéder tout les apostrophes par un antislash (\) ou des doubles apostrophes et précéder toutes les doubles apostrophes par un antislash:
+
+```python
+>>> sentence1 = 'Je vais à l\'école et je suis "COOL"'
+>>> print(sentence1)
+Je vais à l'école et je suis "COOL"
+>>> sentence2 = "Je vais à l'école et je suis \"COOL\""
+>>> print(sentence2)
+Je vais à l'école et je suis "COOL"
+```
+
+Et si votre chaîne fait plus d'une ligne, vous pouvez utilisez les triples apostrophes:
+
+```python
+>>> sentence = """Je vais à l'école et
+    Je suis "COOL"
+"""
+>>> print(sentence)
+Je vais à l'école et
+    Je suis "COOL"
+```
+
+Nous verrons plus sur les chaines de caractères dans un autre chapitre, pour le moment nous allons nous limiter ici.
+
+### type()
