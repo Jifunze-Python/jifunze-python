@@ -122,6 +122,18 @@ Les types de donnees en Python sont nombreux. Nous avons:
 
 Nous allons d'abord des 3 premiers, booléens, nombres et chaines de caractères. Nous verrons les autres plus tard.
 
+### Les booléens (Boolean)
+
+Les booléens sont des types qui ne peuvent prendre que deux valeurs: vrai ou faux. En Python, deux constantes sont utilisées pour représenter ces valeurs: True pour vrai et False pour faux. Il faut bien remarquer la première est en majuscule et n'oubliez pas cela.
+
+Les booléens sont par exemple pour savoir si un utilisateur est toujours actif ou pas, si un article est publier ou pas, ...
+
+```python
+>>> is_active = True
+>>> is_published = False
+>>>
+```
+
 ### Les nombres (Number)
 
 Python supporte deux types de nombres, les entiers et les décimaux. Les nombres sont pratiquement utilisés dans tout les programmes: enregistrer les scores dans un jeu, les notes d'un élève dans une application web, ...
