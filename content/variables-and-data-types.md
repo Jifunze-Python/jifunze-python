@@ -212,7 +212,10 @@ Les chaines de caractères vont par exemple nous permettre d'enregistrer le nom 
 >>> name = 'Diallo'
 >>> phone = '+221 33 000 00 00'
 >>> email = "user@gmail.com'
+>>> number = '25'
 ```
+
+Alors la dernière variable number a tout l'air d'être un entier, mais c'est une chaîne de caractères. Tout ce qui est contenu entre une apostrophe simple ou double est une chaîne de caractères.
 
 Nous pouvons additionner deux chaines, c'est ce qu'on appelle la concaténation, rappelez-vous en:
 
@@ -278,3 +281,91 @@ Je vais à l'école et
 Nous verrons plus sur les chaines de caractères dans un autre chapitre, pour le moment nous allons nous limiter ici.
 
 ### type()
+
+Avant de terminer ce chapitre, j'aimerais vous parler de la fonction type() de Python. Cette fonction va au fait nous permettre de savoir le type d'une variable. Voyons son fonctionnement tout de suite:
+
+```python
+>>> type(4)
+<class 'int'>
+>>> type(3.14)
+<class 'float'>
+>>> type('4')
+<class 'str'>
+>>> type('Diallo')
+<class 'str'>
+>>> age = 14
+>>> type(age)
+<class 'int'>
+>>> is_active = False
+>>> type(is_active)
+<class 'bool'>
+```
+
+Son fonctionnement est super simple au fait, vous mettez type() et entre les parentheses vous mettez l'entité dont vous voulez savoir le type (variables) et vous avez la réponse.
+
+Maintenant essayez ce code:
+
+```python
+>>> name = 'Diallo'
+>>> age = 25
+>>> print('Bonjour ' + name + ', tu as ' + age + ' ans.')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: must be str, not int
+>>>
+```
+
+Bon nous venons d'avoir notre première ensemble en Python, et j'avoue que c'est un peu troublant dès fois. Respirez donc un bon coup et... voyons ce qui n'a pas marcher.
+
+Nous avons une erreur TypeError: must be str, not int qu'est ce que cela veut dire?
+
+Alors ici, name est de type string, age est de type integer, ce que nous faisons c'est vouloir additionner une chaîne de caractères à un entier (hommage à tout ses profs de maths). C'est impossible cela, vous le savez. Ce que nous pouvons faire dans ce cas, c'est de transformer notre entier en string. Pour cela nous allons utiliser la fonction str(), l'affichage va donc ressembler à ça:
+
+```python
+>>> print('Bonjour ' + name + ', tu as ' + str(age) + ' ans.')
+Bonjour Diallo, tu as 25 ans.
+```
+
+Et tout marche bien.
+
+La fonction str() va nous permettre d'obtenir une variable sous le format d'une chaîne. Il y a aussi les fonctions int() et float():
+
+```python
+>>> str(45)
+'45'
+>>> int('20')
+20
+>>> float(20)
+20.0
+>>> int(3.14)
+3
+>>> int('Hello')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: invalid literal for int() with base 10: 'Hello'
+```
+
+Alors vous voyez n'essayez pas de convertir en nombre (int ou float) des caractères alphabétiques, ça ne va pas marcher.
+
+### Les commentaires
+
+Alors avant de terminer ce chapitre, voyons un peu ce qu'est les commentaires.
+
+Un commentaire est du texte que vous écrivez dans votre code source mais qui ne sera pas executer. C'est comme prendre des notes au fait. Les commentaires sont hyper important en programmation, ils vont vous permettre de prendre des notes non seulement pour vous, mais aussi pour les prochaines personnes qui maintiendront votre code.
+
+Pour ajouter un commentaire en Python, il suffit de commencer la ligne par dièse (#):
+
+```python
+>>> # Afficher Bonjour
+>>> print('Bonjour')
+>>> # 2+2 cette ligne n'est pas executer
+>>> 3 + 2 # la réponse est 5
+5
+>>>
+```
+
+La principale raison pour écrire des commentaires est d'expliquer ce que votre code est censé faire et comment vous le faites fonctionner. Lorsque vous êtes en train de travailler sur un projet, vous comprenez comment toutes les pièces s’emboîtent. Mais lorsque vous revenez à un projet après un certain temps, vous aurez probablement oublié certains détails. Vous pouvez toujours étudier votre code pendant un certain temps et comprendre comment les segments étaient censés fonctionner, mais en écrivant de bons commentaires peut vous faire gagner du temps en résumant votre approche globale dans un anglais clair....
+
+Si vous souhaitez devenir un programmeur professionnel ou collaborer avec d'autres programmeurs, vous devez écrire des commentaires significatifs. Aujourd'hui, la plupart des logiciels sont écrits en collaboration, que ce soit par un groupe d'employés d'une entreprise ou par un groupe de personnes travaillant ensemble sur un projet open source. Les programmeurs expérimentés s'attendent à voir les commentaires dans le code. Il est donc préférable de commencer dès maintenant à ajouter des commentaires descriptifs à vos programmes. Écrire des commentaires clairs et concis dans votre code est l’une des habitudes les plus bénéfiques que vous puissiez créer en tant que nouveau programmeur.
+
+Lorsque vous décidez d’écrire un commentaire, demandez-vous si vous devez envisager plusieurs approches avant de trouver un moyen raisonnable de faire fonctionner quelque chose; Si oui, écrivez un commentaire sur votre solution. Il est beaucoup plus facile de supprimer des commentaires supplémentaires ultérieurement que de revenir en arrière et d’écrire des commentaires pour un programme faiblement commenté. À partir de maintenant, je vais utiliser les commentaires dans les exemples de ce livre pour expliquer les sections de code.
